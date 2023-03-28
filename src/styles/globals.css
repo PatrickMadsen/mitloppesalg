@@ -1,9 +1,50 @@
 .modal-open, body {overflow: inherit !important;}
 
 .omOs{
-    background: #357F82;
+    background-image: url("/background-icons.png");
+}
+
+.omOs h1{
+    font-size: 100px;
+    color: #fff;
+    font-family: segoe print;
+    padding-top: 20%;
+    text-shadow: 0.2rem 0.2rem #000;
+}
+
+.butikker{
+    background-image: url("/background-stripe.png");
+    padding-top: 5%;
+}
+
+.butikker h2{
+    padding-top: 5%;
+    color: #000;
+    font-size: 60px;
+}
+
+.vejledning{
+    width: 80%;
+    margin:0 auto;
+    padding-top: 5%;
+}
+
+.vejledning h2{
+    padding-top: 5%;
+}
+
+.height-100{
+    min-height: 100vh;
 }
 
 .center-text{
     text-align: center;
+}
+
+.space{
+    margin-top: 10rem;
+}
+
+.pa-top{
+    padding-top: 10rem;
 }

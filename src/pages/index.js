@@ -4,11 +4,9 @@ import Vejledning from "./vejledning"
 
 export default () => {
   return (
-    <div className="wrapper">
+    <div>
       <OmOs />
-      <div className="mt-5"></div>
       <Butikker />
-      <div className="mt-5"></div>
       <Vejledning />
     </div>
   )

@@ -1,24 +1,25 @@
 export default () => {
     return(
-        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div className="modal fade" id="info" tabindex="-1" aria-labelledby="info" aria-hidden="true">
+            <div className="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
                 <div className="modal-content">
                     <div className="modal-header">
                         <h1 className="modal-title fs-4" id="exampleModalLabel">Genbrugsmarked</h1>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                        <p>Her kan du logge ind og følge med i dit salg -samt udskrive labels ud hjemmefra</p>
-                        <div className="row">
-                            <div className="col-6">
-                                <h3 className="fs-5">Om Genbrugsmarked</h3>
+                        <p><b>Her kan du logge ind og følge med i dit salg -samt udskrive labels</b></p>
+                        <a className="btn btn-secondary">Logind</a>
+                        <div className="row mt-3">
+                            <div>
+                                <h3 className="fs-3">Om Genbrugsmarked</h3>
                                 <p>Danmarks smarteste loppemarkeds løsning.</p>
                                 <p>Tjen ekstra penge eller gør et godt genbrugskup.</p>
                                 <p>Nemt og bekvemt.</p>
                                 <p>Stort som småt, genbrug er godt</p>
                             </div>
-                            <div className="col-6">
-                                <h3 className="fs-5">Åbningstider</h3>
+                            <div>
+                                <h3 className="fs-3">Åbningstider</h3>
                                 <table class="table table-striped">
                                     <tbody>
                                         <tr>
@@ -56,32 +57,36 @@ export default () => {
                                     </tbody>
                                 </table>
                             </div>
-                            <div className="col-6">
-                                <h3 className="fs-5">Kontakinformation</h3>
+                            <div>
+                                <h3 className="fs-3">Kontakinformation</h3>
                                 <table className="table">
                                     <tbody>
                                         <tr>
-                                            <td scope="row">Genbrugsmarked</td>
+                                            <th  scope="row">Navn</th>
+                                            <td>Genbrugsmarked</td>
                                         </tr>
                                         <tr>
-                                            <td scope="row">Måløv Stationsplads 1</td>
+                                            <th scope="row">Adresse</th>
+                                            <td>Måløv Stationsplads 1</td>
                                         </tr>
                                         <tr>
-                                            <td scope="row">2760 Måløv</td>
+                                            <th scope="row">Post nr/by</th>
+                                            <td>2760 Måløv</td>
                                         </tr>
                                         <tr>
-                                            <td scope="row">kontakt@genbrugsmarked.com</td>
+                                            <th scope="row">E-mail</th>
+                                            <td>kontakt@genbrugsmarked.com</td>
                                         </tr>
                                         <tr>
-                                            <td scope="row">+45 31 10 77 55</td>
+                                            <th scope="row">Tlf</th>
+                                            <td>+45 31 10 77 55</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div className="col-6">
-                                <h3 className="fs-5">Sociale medier</h3>
-                                <a href="#"><i className="fab fa-facebook-f fa-2x" style={{color: "#3b5998"}}></i></a>
-                                <a href="#"><i className="fab fa-instagram fa-2x" style={{color: "#ac2bac"}}></i></a>
+                            <div>
+                                <a href="#"><i className="fab fa-facebook-f fa-2x px-2" style={{color: "#3b5998"}}></i></a>
+                                <a href="#"><i className="fab fa-instagram fa-2x px-2" style={{color: "#ac2bac"}}></i></a>
                             </div>
                         </div>
                     </div>

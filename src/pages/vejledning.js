@@ -1,12 +1,10 @@
 export default () => {
     return(
-        <div className="container-fluid">
+        <div className="container-fluid vejledning height-100">
             <div className="row">
-                <h2 className="center-text">Kom godt igang med Mitloppesalg</h2>
-                <div className="ratio ratio-16x9 mt-5">
+                <div className="ratio ratio-16x9">
                     <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/LjrtV5W7-T8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
-                <div className="mt-5"></div>
                 <div className="col-4">
                     <p>Sådan opretter du MitLoppeSalg og inviterer kommissionskunder</p>
                     <a href="https://mitloppesalg.dk/wp-content/uploads/2021/04/Oprettelse-af-Mit-salg.pdf">Oprettelse at Mit salg</a>

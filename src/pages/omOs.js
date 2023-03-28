@@ -1,34 +1,19 @@
 export default () => {
     return(
-        <div className="omOs container-fluid">
-        <div className="row">
-            <h1></h1>
-            <div className="col-4"><img src="/logo.png" /></div>
-            <div className="col-8">
-                <p>
-                Hvad er MitLoppeSalg ?
-MitLoppeSalg.dk er en portal der bruges i loppemarkeds-butikker 
-med kommissionssalg/udlejning af stande. Udviklet af Saldi.dk.
-</p>
-<p>
-I systemet kan butikken oprette, registrere nye standlejere og i
-oversigten har butikken det fulde overblik over hvilke stande
-der er lejet ud og hvor længe de er lejet ud.
-</p>
-<p>
-I MitLoppeSalg kan den enkelte stand-lejer selv, via et login,
-komme ind at se hvornår og hvilke varer der er solgt fra egen stand.
-</p>
-<p>
-MitLoppeSalg giver stand-lejere mulighed for hjemmefra
-at skrive deres egne labels med tekster, priser og stregkode,
-som derefter udskrives i butikken.
-</p>
-<p>
-På MitLoppeSalg.dk kan Loppebutikken få vist
-logo, billeder samt informationer om butikken.
-                </p>
-            </div>
+        <div className="omOs container-fluid height-100">
+        <div>
+            <h1 className="text-center pa-top">MITLOPPESALG</h1>
+            <div className="space"></div>
+        </div>
+        <div className="d-flex justify-content-center">
+            <a href="#section1">
+                <button type="button" className="btn btn-lg btn-primary ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"></path>
+                    </svg>
+                    Næste Side
+                </button>
+            </a>
         </div>
         </div>
     )
