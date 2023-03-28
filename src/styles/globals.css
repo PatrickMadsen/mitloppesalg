@@ -1,0 +1,9 @@
+.modal-open, body {overflow: inherit !important;}
+
+.omOs{
+    background: #357F82;
+}
+
+.center-text{
+    text-align: center;
+}
