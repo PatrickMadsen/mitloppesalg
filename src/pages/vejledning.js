@@ -1,9 +1,9 @@
 export default () => {
     return(
-        <div className="container-fluid vejledning height-100">
+        <div className="container vejledning height-100">
             <div className="row">
                 <div className="ratio ratio-16x9">
-                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/LjrtV5W7-T8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/LjrtV5W7-T8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
                 <div className="col-4">
                     <p>Sådan opretter du MitLoppeSalg og inviterer kommissionskunder</p>

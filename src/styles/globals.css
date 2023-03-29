@@ -1,19 +1,30 @@
-.modal-open, body {overflow: inherit !important;}
+p{
+    font-size: 1.3rem;
+}
 
-.omOs{
+hr{
+    padding-top: 0.1rem;
+}
+
+.forside{
     background-image: url("/background-icons.png");
 }
 
-.omOs h1{
-    font-size: 100px;
+.forside h1{
+    font-size: 6rem;
     color: #fff;
     font-family: segoe print;
-    padding-top: 20%;
+    text-shadow: 0.2rem 0.2rem #000;
+}
+
+.forside p{
+    font-size: 4rem;
+    color: #fff;
+    font-family: segoe print;
     text-shadow: 0.2rem 0.2rem #000;
 }
 
 .butikker{
-    background-image: url("/background-stripe.png");
     padding-top: 5%;
 }
 
@@ -45,6 +56,14 @@
     margin-top: 10rem;
 }
 
-.pa-top{
+.pa-top-10{
     padding-top: 10rem;
+}
+
+.pa-top-5{
+    padding-top: 5rem;
+}
+
+.ma-top-5{
+    margin-top: 5rem;
 }

@@ -1,6 +1,6 @@
 export default () => {
     return(
-        <div className="modal fade" id="info" tabindex="-1" aria-labelledby="info" aria-hidden="true">
+        <div className="modal fade" id="info" tabIndex="-1" aria-labelledby="info" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
                 <div className="modal-content">
                     <div className="modal-header">
@@ -20,7 +20,7 @@ export default () => {
                             </div>
                             <div>
                                 <h3 className="fs-3">Åbningstider</h3>
-                                <table class="table table-striped">
+                                <table className="table table-striped">
                                     <tbody>
                                         <tr>
                                             <th scope="col">Dag</th>
@@ -90,8 +90,8 @@ export default () => {
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
