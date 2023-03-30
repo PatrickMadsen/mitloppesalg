@@ -1,7 +1,7 @@
 export default () => {
     return(
-        <div className="container height-100">
-            <div className="row pa-top-5 d-flex justify-content-center text-center">
+        <div className="container height-100" id="kontakt">
+            <div className="row d-flex justify-content-center text-center">
                 <h3 className="col-12 fs-1">Kontakt os</h3>
                 <div className="col-8 pa-top-5">
                     <p> Er du ved at starte Loppemarked med

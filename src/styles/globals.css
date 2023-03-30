@@ -7,17 +7,13 @@ hr{
 }
 
 .forside{
-    background-image: url("/background-bow.png");
-    min-height: 100vh;
-}
-
-.forside h1{
-    font-size: 6rem;
-    color: #fff;
+    background: url("/background.png");
 }
 
 .forside p{
-    font-size: 4rem;
+    font-family: "Segoe UI";
+    font-size: 3.5rem;
+    font-weight: 300;
     color: #fff;
 }
 
@@ -36,13 +32,16 @@ hr{
     font-size: 60px;
 }
 
-.vejledning{
-    background-color: #F0F1F3;
+.vejledning h2{
     padding-top: 5%;
 }
 
-.vejledning h2{
-    padding-top: 5%;
+.system{
+    background: #F0F1F3;
+}
+
+.kontak{
+    background: #F0F1F3;
 }
 
 .height-100{
@@ -67,6 +66,10 @@ hr{
 
 .ma-top-5{
     margin-top: 5rem;
+}
+
+.bottom{
+    margin-top: 30%
 }
 
 @media screen and (max-width: 1000px) {
