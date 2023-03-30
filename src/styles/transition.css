@@ -1,0 +1,13 @@
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(35vh);
+    visibility: hidden;
+    transition: opacity 3.5s linear, transform 3.5s linear;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}

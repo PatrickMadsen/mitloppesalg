@@ -1,5 +1,5 @@
 p{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 hr{
@@ -7,25 +7,27 @@ hr{
 }
 
 .forside{
-    background-image: url("/background-icons.png");
+    background-image: url("/background-bow.png");
+    min-height: 100vh;
 }
 
 .forside h1{
     font-size: 6rem;
     color: #fff;
-    font-family: segoe print;
-    text-shadow: 0.2rem 0.2rem #000;
 }
 
 .forside p{
     font-size: 4rem;
     color: #fff;
-    font-family: segoe print;
-    text-shadow: 0.2rem 0.2rem #000;
+}
+
+.om hr{
+    background-color: #ccc !important;
 }
 
 .butikker{
     padding-top: 5%;
+    background-color: #F0F1F3
 }
 
 .butikker h2{
@@ -35,8 +37,7 @@ hr{
 }
 
 .vejledning{
-    width: 80%;
-    margin:0 auto;
+    background-color: #F0F1F3;
     padding-top: 5%;
 }
 
@@ -66,4 +67,29 @@ hr{
 
 .ma-top-5{
     margin-top: 5rem;
+}
+
+@media screen and (max-width: 1000px) {
+    p{
+        font-size: 0.8rem;
+    }
+    .pa-top-10{
+        padding-top: 8rem;
+    }
+    
+    .pa-top-5{
+        padding-top: 3rem;
+    }
+    
+    .ma-top-5{
+        margin-top: 3rem;
+    }
+
+    .height-100{
+        min-height: 80vh;
+    }
+
+    .hide-sm{
+        display: none;
+    }
 }

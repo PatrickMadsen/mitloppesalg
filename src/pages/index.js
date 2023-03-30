@@ -9,11 +9,11 @@ export default () => {
     <div>
       <Forside />
       <Om />
-      <hr className="hr hr-blurry" />
+      <div className="space"></div>
       <Butikker />
-      <hr className="hr hr-blurry" />
+      <div className="space"></div>
       <Kontakt />
-      <hr className="hr hr-blurry" />
+      <div className="space"></div>
       <Vejledning />
     </div>
   )
