@@ -11,14 +11,14 @@ export default () => {
                         <p><b>Her kan du logge ind og følge med i dit salg -samt udskrive labels</b></p>
                         <a className="btn btn-secondary">Logind</a>
                         <div className="row mt-3">
-                            <div>
+                            <div className="col-12 col-lg-6">
                                 <h3 className="fs-3">Om Genbrugsmarked</h3>
                                 <p>Danmarks smarteste loppemarkeds løsning.</p>
                                 <p>Tjen ekstra penge eller gør et godt genbrugskup.</p>
                                 <p>Nemt og bekvemt.</p>
                                 <p>Stort som småt, genbrug er godt</p>
                             </div>
-                            <div>
+                            <div className="col-12 col-lg-6">
                                 <h3 className="fs-3">Åbningstider</h3>
                                 <table className="table table-striped">
                                     <tbody>
@@ -76,7 +76,7 @@ export default () => {
                                         <tr>
                                             <th scope="row">E-mail</th>
                                             <td>kontakt@genbrugsmarked.com</td>
-                                        </tr>
+                                        </tr>   
                                         <tr>
                                             <th scope="row">Tlf</th>
                                             <td>+45 31 10 77 55</td>
@@ -84,14 +84,16 @@ export default () => {
                                     </tbody>
                                 </table>
                             </div>
-                            <div>
-                                <a href="#"><i className="fab fa-facebook-f fa-2x px-2" style={{color: "#3b5998"}}></i></a>
-                                <a href="#"><i className="fab fa-instagram fa-2x px-2" style={{color: "#ac2bac"}}></i></a>
-                            </div>
                         </div>
                     </div>
-                    <div className="modal-footer">
-                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <div className="d-flex">
+                        <div className="me-auto p-2">
+                            <a href="#"><i className="fab fa-facebook-f fa-2x px-2" style={{color: "#3b5998"}}></i></a>
+                            <a href="#"><i className="fab fa-instagram fa-2x px-2" style={{color: "#ac2bac"}}></i></a>
+                        </div>
+                        <div className="p-2">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>

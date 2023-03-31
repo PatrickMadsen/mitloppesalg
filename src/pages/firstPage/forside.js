@@ -2,10 +2,10 @@ export default () => {
     return(
         <div className="forside height-100">
             <div className="container">
-                <div className="text-center pa-top-10">
+                <div className="text-center pa-top-5">
                     <div className="bottom">
-                        <p>Står du og skal udleje stande på et loppemarked?</p>
-                        <p><a href="#kontakt" className="btn btn-primary">Kontakt os</a></p>
+                        <p>Har du eller tænker du at starte et loppesupermarked?</p>
+                        <a href="#kontakt" className="btn btn-primary mt-5">Kontakt os</a>
                     </div>
                 </div>
             {/* <div className="d-flex justify-content-center">

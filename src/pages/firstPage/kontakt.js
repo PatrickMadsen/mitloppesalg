@@ -1,6 +1,9 @@
+import Modal from "./kontaktModal"
+
 export default () => {
     return(
         <div className="container height-100" id="kontakt">
+            <Modal />
             <div className="row d-flex justify-content-center text-center">
                 <h3 className="col-12 fs-1">Kontakt os</h3>
                 <div className="col-8 pa-top-5">
@@ -17,6 +20,7 @@ export default () => {
 
                         For kontakt og yderlig information, brug venligst kontaktformularen.
                     </p>
+                    <p>Vis du har brug for support <a className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#support" type="button" href="#">KLIK HER</a></p>
                 </div>
             </div>
             <form>
@@ -33,11 +37,13 @@ export default () => {
                     <input name="email" placeholder="example@website.com" type="email" className="form-control" id="email" aria-describedby="email"/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="navn" className="form-label"></label>
+                    <label htmlFor="besked" className="form-label">Besked:</label>
                     <textarea className="form-control" id="txt" name="txt" rows="3"></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
+
+        
     )
 }
