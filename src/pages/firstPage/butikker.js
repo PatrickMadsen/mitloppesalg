@@ -10,8 +10,8 @@ export default () => {
     }
 
     return(
-        <div className="butikker height-100" id="butikker">
-            <div className="container">
+        <div className="butikker" id="butikker">
+            <div className="container width">
                 <Modal />
                 <div className="col-12 text-center">
                     <h3 className="fs-1">Vores Partnere</h3>

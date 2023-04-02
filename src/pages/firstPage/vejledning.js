@@ -1,8 +1,12 @@
 export default () => {
     return(
         <div className="vejledning">
-            <div className="container height-100">
-            <h3 className="fs-1 text-center pb-5">Vejledning</h3>
+            <div className="container width">
+            <div className="text-center">
+                <h3 className="fs-1">Brug for lidt vejledning?</h3>
+                <p>Se vores video eller tag et kig på vores guides. </p>
+                <p>Du er selvfølig altid velkommen til at skrive til vores support <a className="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#support" type="button" href="#">Her</a></p>
+            </div>
                 <div className="row d-flex justify-content-center">
                     <div className="col-9">
                         <div className="ratio ratio-16x9">

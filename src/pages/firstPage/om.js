@@ -3,15 +3,15 @@ import FadeRight from "./fadeInRight"
 
 export default () => {
     return( 
-        <div className="height-100" id="section1">
-            <div className="container pa-top-5">
+        <div className="om">
+            <div className="container width">
                 <FadeLeft>
                     <div className="row">
                         <div className="col-5">
-                            <img src="/vintage-retro-things.png" className="img-fluid"/>
+                            <img src="/aboutus.jpg" className="img-fluid"/>
                         </div>
                         <div className="col-7 align-items-center">
-                            <h3 className="fs-1 col-12 pb-5">Hvem er vi?</h3>
+                            <h3 className="fs-1 pb-5">Hvem er vi?</h3>
                             <p>MitLoppeSalg.dk er en portal der bruges i loppemarkeds-butikker  med kommissionssalg/udlejning af stande. Udviklet af Saldi.dk.I systemet kan butikken oprette og registrere nye standlejere. I oversigten har butikken det fulde overblik over hvilke stande er lejet ud og hvor længe.</p>
                         </div>
                     </div>
@@ -20,7 +20,7 @@ export default () => {
                     <FadeRight>
                         <div className="row">
                             <div className="col-7 align-items-center">
-                                <h3 className="fs-1 col-12 pb-5">Følg med hjemmefra</h3>
+                                <h3 className="fs-1 pb-5">Følg med hjemmefra</h3>
                                 <p>
                                     I MitLoppeSalg kan den enkelte stand-lejer selv, via et login,
                                     komme ind at se hvornår og hvilke varer der er solgt fra egen stand.
@@ -36,7 +36,7 @@ export default () => {
                                 </p>
                             </div>
                             <div className="col-5">
-                                <img src="/vintage-coffee-mill.png" className="img-fluid float-end"/>
+                                <img src="/fromhome.jpg" className="img-fluid float-end"/>
                             </div>
                         </div>
                     </FadeRight>
