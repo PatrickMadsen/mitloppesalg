@@ -1,10 +1,21 @@
 import FadeLeft from "./fadeInLeft"
 import FadeRight from "./fadeInRight"
+import { useRef, useEffect } from "react"
 
-export default () => {
+export default (props) => {
+    const domRef = useRef()
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => props.set(entry.isIntersecting))
+        })
+        observer.observe(domRef.current)
+        return () => observer.unobserve(domRef.current)
+      }, [])
+
     return( 
-        <div className="om">
-            <div className="container width">
+        <div className="om"  id="om">
+            <div className="container width" ref={domRef}>
                 <FadeLeft>
                     <div className="row">
                         <div className="col-5">

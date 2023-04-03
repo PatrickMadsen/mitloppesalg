@@ -1,7 +1,7 @@
 import Modal from "./kontaktModal"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 
-export default () => {
+export default (props) => {
     const [msg, updateMsg] = useState("")
 
     const handleSubmit = async (event) => {
@@ -40,11 +40,21 @@ export default () => {
 
     }
 
+    const domRef = useRef()
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => props.set(entry.isIntersecting))
+        })
+        observer.observe(domRef.current)
+        return () => observer.unobserve(domRef.current)
+      }, [])
+
     return(
         <>
          <Modal />
-        <div className="kontakt">
-            <div className="container width" id="kontakt">
+        <div className="kontakt"  id="kontakt">
+            <div className="container width" id="kontakt" ref={domRef}>
                
                 <div className="row d-flex justify-content-center text-center">
                     <h3 className="col-12 fs-1">Kontakt os</h3>

@@ -1,9 +1,12 @@
+body{
+}
+
 p{
-    color: #030303;
+    color: #343434;
 }
 
 h1, h2, h3, h4 ,h5 ,h6{
-    color: #030303;
+    color: #343434;
 }
 
 hr{
@@ -11,7 +14,7 @@ hr{
 }
 
 .forside{
-    background: #fdfdfd;
+    background: url("/background.png");
     min-height: 100vh;
 }
 
@@ -22,22 +25,12 @@ hr{
 }
 
 .om{
-    background-color: #676767;
     min-height: 100vh;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.om p{
-    color: #fff;
-}
-
-.om h3{
-    color: #fff;
-}
-
 .butikker{
-    background-color: #edeef0;
     padding-top: 5%;
     padding-bottom: 5%;
     min-height: 100vh;
@@ -50,21 +43,19 @@ hr{
 }
 
 .vejledning{
-    background-color: #ffffff;
     min-height: 100vh;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
 .system{
-    background-color: #cecece;
     min-height: 100vh;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
 .kontakt{
-    background-color: #333333;
+    background: url("/background-kontakt.png");
     min-height: 100vh;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -100,6 +91,10 @@ hr{
 
 .pa-top-5{
     padding-top: 5rem;
+}
+
+.pa-left-5{
+    padding-left: 0.5rem;
 }
 
 .ma-top-5{

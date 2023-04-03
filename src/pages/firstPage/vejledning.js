@@ -1,6 +1,18 @@
-export default () => {
+import { useRef, useEffect } from "react"
+
+export default (props) => {
+    const domRef = useRef()
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => props.set(entry.isIntersecting))
+        })
+        observer.observe(domRef.current)
+        return () => observer.unobserve(domRef.current)
+      }, [])
+
     return(
-        <div className="vejledning">
+        <div className="vejledning"  id="vejledning" ref={domRef}>
             <div className="container width">
             <div className="text-center">
                 <h3 className="fs-1">Brug for lidt vejledning?</h3>

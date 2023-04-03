@@ -1,10 +1,12 @@
+import Data from "../../../db/loppemarkeder.json"
+
 export default () => {
     return(
         <div className="modal fade" id="info" tabIndex="-1" aria-labelledby="info" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h1 className="modal-title fs-4" id="exampleModalLabel">Genbrugsmarked</h1>
+                        <h1 className="modal-title fs-4" id="exampleModalLabel">{}</h1>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">

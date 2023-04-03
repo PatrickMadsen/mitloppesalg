@@ -1,17 +1,27 @@
 import Card from "./butikkerCard"
 import Modal from "./butikkerModal"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 
-export default () => {
+export default (props) => {
     const [open, changeOpen] = useState("VIS FLERE")
 
     const change = () => {
         (open == "VIS FLERE")? changeOpen("VIS MINDRE") : changeOpen("VIS FLERE")
     }
 
+    const domRef = useRef()
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => props.set(entry.isIntersecting))
+        })
+        observer.observe(domRef.current)
+        return () => observer.unobserve(domRef.current)
+      }, [])
+
     return(
-        <div className="butikker" id="butikker">
-            <div className="container width">
+        <div className="butikker" id="partnere">
+            <div className="container width" ref={domRef}>
                 <Modal />
                 <div className="col-12 text-center">
                     <h3 className="fs-1">Vores Partnere</h3>

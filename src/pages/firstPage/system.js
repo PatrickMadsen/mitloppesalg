@@ -1,7 +1,19 @@
-export default () => {
+import {useRef, useEffect} from "react"
+
+export default (props) => {
+    const domRef = useRef()
+        
+    useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => props.set(entry.isIntersecting))
+    })
+    observer.observe(domRef.current)
+    return () => observer.unobserve(domRef.current)
+    }, [])
+
     return(
-        <div className="system">
-            <div className="container width">
+        <div className="system"  id="system">
+            <div className="container width" ref={domRef}>
                 <div className="row">
                     <h2 className="text-center fs-1 pb-5">Vores system</h2>
                     <div className="col-4 mt-5">
