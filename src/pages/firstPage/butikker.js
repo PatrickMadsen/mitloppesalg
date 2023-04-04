@@ -1,5 +1,6 @@
 import Card from "./butikkerCard"
 import Modal from "./butikkerModal"
+import Data from "../../../db/loppemarkeder.json"
 import { useState, useRef, useEffect } from "react"
 
 export default (props) => {
@@ -31,7 +32,7 @@ export default (props) => {
                 </div>
                 <div className="row">
                     <div className="col text-center">
-                        <button onClick={change} className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">{open}</button>
+                        {(Data.loppemarkeder.length > 8) ? <button onClick={change} className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">{open}</button> : ""}
                     </div>
                 </div>
             </div>
