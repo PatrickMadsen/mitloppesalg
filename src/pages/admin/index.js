@@ -7,7 +7,7 @@ export default () => {
     const [editId, setEditId] = useState()
 
     const slet = async (index) => {
-        Data.loppemarkeder.splice(index, 1)
+        const arr = Data.loppemarkeder.splice(index, 1)
         const JSONdata = JSON.stringify(Data)
         const endpoint = '/api/writeFile'
         const options = {
@@ -17,21 +17,18 @@ export default () => {
           },
           body: JSONdata
         }
-    
+
         const response = await fetch(endpoint, options)
         if(response.status == 400){
             console.log(response.data)
             return ""
         }
-
-    }
-
-    const edit = (index) => {
-        console.log(index)
     }
 
     return(
         <div className="container">
+            <div className="pa-top-5"></div>
+            <h3 className="text-center pb-2">Partnere</h3>
             <Edit index={editId} />
             <Create />
             <table className="table table-striped">

@@ -25,6 +25,17 @@ export default (props) => {
     const handler = async (e) => {
         e.preventDefault()
 
+        let socialObj = {}
+        DataDb.loppemarkeder.map((i, index) => {
+            if(index === props.index){
+                socialObj = i.social.map(i => {
+                    return{
+                        img: i.img,
+                        link: i.link
+                    }
+                })
+            }
+        })
         const obj = {
             kontakt: {
                 adresse: e.target.adresse.value,
@@ -35,16 +46,7 @@ export default (props) => {
             link: e.target.link.value,
             navn: e.target.navn.value,
             om: e.target.om.value,
-            social: [
-                DataDb.loppemarkeder.map((i, index) => {
-                    if(index === props.index){
-                        return {
-                            img: i.img,
-                            link: i.link
-                        }
-                    }
-                })
-            ],
+            social: socialObj,
             åbningstider: [
                 e.target.mandag.value,
                 e.target.tirsdag.value,

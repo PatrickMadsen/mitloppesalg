@@ -17,10 +17,14 @@ export default () => {
   return (
     <>
       <Nav om={omActive} butik={butikActive} vejled={vejledActive} system={systemActive} kontakt={kontaktActive} />
-      <Forside />
-      <Om set={setOmActive} />
-      <Butikker set={setButikActive} />
-      <Vejledning set={setVejledActive} />
+      <div className="forside-om">
+        <Forside />
+        <Om set={setOmActive} />
+      </div>
+      <div className="butik-vejled">
+        <Butikker set={setButikActive} />
+        <Vejledning set={setVejledActive} />
+      </div>
       <System set={setSystemActive} />
       <Kontakt set={setKontaktActive} />
     </>
