@@ -1,5 +1,4 @@
 import { IncomingForm } from 'formidable'
-import { promises as fs } from 'fs'
 
 const mv = require('mv')
 

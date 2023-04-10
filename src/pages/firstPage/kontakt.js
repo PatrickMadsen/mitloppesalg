@@ -26,7 +26,6 @@ export default (props) => {
     
         const response = await fetch(endpoint, options)
         if(response.status == 400){
-            console.log(response.data)
             return updateMsg("Udfyld alle felter")
         }
         const result = await response.json()

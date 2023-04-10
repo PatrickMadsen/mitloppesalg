@@ -84,6 +84,21 @@ nav{
     color: #c7c7c7;
 }
 
+.login{
+    margin-top: 30vh;
+    width: 40vw;
+    border: #000;
+}
+
+.login label{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.login button{
+    margin-top: 1rem;
+}
+
 .modal-body p, .modal-body h3{
     color: #030303;
 }
