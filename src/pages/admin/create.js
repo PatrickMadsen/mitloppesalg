@@ -55,10 +55,7 @@ export default (props) => {
         const fredag = e.target.fredag.value
         const lørdag = e.target.lørdag.value
         const søndag = e.target.søndag.value
-
-        if(adresse == "" || email == "" || postnr == "" || tlf == "" || navn == "" || om == "" || mandag == "" || tirsdag == "" || onsdag == "" || torsdag == "" || fredag == "" || lørdag == "" || søndag == "" || img == ""){
-            return setMsg("Udfyld alle felter")
-        }
+        const hjemmeside = e.target.hjemmeside.value
 
         const socialImg = Array.from(document.getElementsByName("socialImg[]"))
         const socialLink = Array.from(document.getElementsByName("socialLink[]"))   
@@ -89,7 +86,7 @@ export default (props) => {
             social: [
                 socialImg.map((i, index) => {
                     return {
-                        img: socialNames[socialImg[index].value.toLower()],
+                        img: socialNames[socialImg[index].value.toLowerCase()],
                         link: socialLink[index].value
                     }
                 }) 
@@ -102,7 +99,8 @@ export default (props) => {
                 fredag,
                 lørdag,
                 søndag
-            ]
+            ],
+            hjemmeside: hjemmeside
         }
         
         DataDb.loppemarkeder.push(obj)
@@ -176,6 +174,10 @@ export default (props) => {
                                 <p>link til deres sociale medie: <input name="socialLink[]" type="txt" className="form-control" aria-describedby="social"/></p>
                             </div>
                             <button onClick={addSocial} type="button" className="btn btn-primary">Create Social Media</button>
+                            <div className="mb-3">
+                                <label htmlFor="hjemmeside" className="form-label">Hjemmeside: </label>
+                                <input name="hjemmeside" type="txt" className="form-control" aria-describedby="hjemmeside"/>
+                            </div>
                             <div className="mb-3">
                                 <label htmlFor="om" className="form-label">Om:</label>
                                 <textarea className="form-control" id="om" name="om" rows="3"></textarea>

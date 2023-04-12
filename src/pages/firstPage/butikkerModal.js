@@ -1,6 +1,29 @@
 import Data from "../../../db/loppemarkeder.json"
 
-export default () => {
+export default (props) => {
+    let navn, tlf, email, adresse, postnr, om, link, mandag, tirsdag, onsdag, torsdag, fredag, lørdag, søndag
+
+    Data.loppemarkeder.map((i, index) => {
+        if(index === props.id){
+            navn = i.navn
+            tlf = i.kontakt.tlf
+            email = i.kontakt.email
+            adresse = i.kontakt.adresse
+            postnr = i.kontakt.postnr
+            link = i.link
+            om = i.om
+            mandag = i.åbningstider[0]
+            tirsdag = i.åbningstider[1]
+            onsdag = i.åbningstider[2]
+            torsdag = i.åbningstider[3]
+            fredag = i.åbningstider[4]
+            lørdag = i.åbningstider[5]
+            søndag = i.åbningstider[6]
+        }
+    })
+
+
+
     return(
         <div className="modal fade" id="info" tabIndex="-1" aria-labelledby="info" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
@@ -14,11 +37,8 @@ export default () => {
                         <a className="btn btn-secondary">Logind</a>
                         <div className="row mt-3">
                             <div className="col-12 col-lg-6">
-                                <h3 className="fs-3">Om Genbrugsmarked</h3>
-                                <p>Danmarks smarteste loppemarkeds løsning.</p>
-                                <p>Tjen ekstra penge eller gør et godt genbrugskup.</p>
-                                <p>Nemt og bekvemt.</p>
-                                <p>Stort som småt, genbrug er godt</p>
+                                <h3 className="fs-3">Om {navn}</h3>
+                                {om}
                             </div>
                             <div className="col-12 col-lg-6">
                                 <h3 className="fs-3">Åbningstider</h3>
@@ -30,31 +50,31 @@ export default () => {
                                         </tr>
                                         <tr>
                                             <th scope="row">Mandag</th>
-                                            <td>10:00 - 18:00</td>
+                                            <td>{mandag}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Tirsdag</th>
-                                            <td>10:00 - 18:00</td>
+                                            <td>{tirsdag}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Onsdag</th>
-                                            <td>10:00 - 18:00</td>
+                                            <td>{onsdag}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Torsdag</th>
-                                            <td>10:00 - 18:00</td>
+                                            <td>{torsdag}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Fredag</th>
-                                            <td>10:00 - 18:00</td>
+                                            <td>{fredag}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Lørdag</th>
-                                            <td>10:00 - 16:00</td>
+                                            <td>{lørdag}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Søndag</th>
-                                            <td>10:00 - 16:00</td>
+                                            <td>{søndag}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -65,23 +85,23 @@ export default () => {
                                     <tbody>
                                         <tr>
                                             <th  scope="row">Navn</th>
-                                            <td>Genbrugsmarked</td>
+                                            <td>{navn}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Adresse</th>
-                                            <td>Måløv Stationsplads 1</td>
+                                            <td>{adresse}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Post nr/by</th>
-                                            <td>2760 Måløv</td>
+                                            <td>{postnr}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">E-mail</th>
-                                            <td>kontakt@genbrugsmarked.com</td>
+                                            <td>{email}</td>
                                         </tr>   
                                         <tr>
                                             <th scope="row">Tlf</th>
-                                            <td>+45 31 10 77 55</td>
+                                            <td>{tlf}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -90,8 +110,13 @@ export default () => {
                     </div>
                     <div className="d-flex">
                         <div className="me-auto p-2">
-                            <a href="#"><i className="fab fa-facebook-f fa-2x px-2" style={{color: "#3b5998"}}></i></a>
-                            <a href="#"><i className="fab fa-instagram fa-2x px-2" style={{color: "#ac2bac"}}></i></a>
+                            {Data.loppemarkeder.map((i, index) => {
+                                if(index === props.id){
+                                    return i.social.map((i, index) => {
+                                        return <a href={i.link} key={index}><i className={i.img} style={{color: "#3b5998"}}></i></a>
+                                    })
+                                }
+                            })}
                         </div>
                         <div className="p-2">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>

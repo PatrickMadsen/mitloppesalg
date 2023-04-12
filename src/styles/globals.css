@@ -27,10 +27,11 @@ nav{
     min-height: 100vh;
 }
 
-.forside > div > div > p{
+.forside p{
     font-family: "Segoe UI";
     font-size: 3.5rem;
     font-weight: 300;
+    color: #fff;
 }
 
 .om{
@@ -51,10 +52,15 @@ nav{
     min-height: 100vh;
 }
 
-.butikker > h2{
+.butikker h2{
     padding-top: 5%;
     color: #000;
     font-size: 60px;
+}
+
+.butikker img{
+    height: 225px;
+    width: 225px;
 }
 
 .vejledning{

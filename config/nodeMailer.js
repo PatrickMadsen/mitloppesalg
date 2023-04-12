@@ -12,5 +12,5 @@ export const trans = nodemailer.createTransport({
 
 export const mailOptions = {
     from: email,
-    to: email
+    to: "info@saldi.dk"
 }

@@ -33,11 +33,20 @@ export default () => {
             return ""
         }
     }
+
+    function download(content, fileName, contentType) {
+        const a = document.createElement("a")
+        const file = new Blob([content], { type: contentType })
+        a.href = URL.createObjectURL(file)
+        a.download = fileName
+        a.click()
+    }
+
     if(status === "authenticated"){
         return(
             <div className="container">
                 <div className="pa-top-5"></div>
-                <h3 className="text-center pb-2">Partnere</h3>
+                <h3 className="text-center pb-4">Partnere</h3>
                 <Edit index={editId} />
                 <Create />
                 <table className="table table-striped">
@@ -47,6 +56,7 @@ export default () => {
                                 return(
                                     <tr key={index}>
                                         <th scope="row">{index}</th>
+                                        <td><img src={i.link} height="50" width="50" className="rounded-circle" /></td>
                                         <td>{i.navn}</td>
                                         <td className="col-1"><a onClick={() => setEditId(index)} className="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#edit">Edit</a></td>
                                         <td className="col-1"><button onClick={() => slet(index)} type="button" className="btn btn-danger">Slet</button></td>
@@ -60,6 +70,7 @@ export default () => {
                     <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create">Create New</button>
                 </div>
                 <div className="space"></div>
+                <button className="btn btn-primary" hidden id="download"  onClick={() => {download(JSON.stringify(Data), "yourfile.json", "text/plain")}}>Download DB</button>
             </div>
         )
     }

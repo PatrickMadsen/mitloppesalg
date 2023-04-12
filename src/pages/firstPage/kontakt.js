@@ -30,7 +30,7 @@ export default (props) => {
         }
         const result = await response.json()
         
-        updateMsg("Tak fordi du kontaktet os vi vil vende tilbage snarest")
+        updateMsg("Tak fordi du kontaktet os vi vil vende tilbage snarest muligt")
 
         event.target.navn.value = ""
         event.target.tlf.value = ""

@@ -5,6 +5,7 @@ import Om from "./firstPage/om"
 import Kontakt from "./firstPage/kontakt"
 import System from "./firstPage/system"
 import Nav from "./nav"
+import Head from "next/head"
 import {useRef, useEffect, useState} from "react"
 
 export default () => {
@@ -16,6 +17,10 @@ export default () => {
 
   return (
     <>
+    <Head>
+      <title>Mitloppesalg</title>
+      <link rel="icon" type="image/x-icon" href="/favicon-32x32.png"></link>
+    </Head>
       <Nav om={omActive} butik={butikActive} vejled={vejledActive} system={systemActive} kontakt={kontaktActive} />
       <div className="forside-om">
         <Forside />

@@ -1,7 +1,7 @@
 import DataDb from "../../../db/loppemarkeder.json"
 
 export default (props) => {
-    let navn, tlf, email, adresse, postnr, link, om, mandag, tirsdag, onsdag, torsdag, fredag, lørdag, søndag
+    let navn, tlf, hjemmeside, email, adresse, postnr, link, om, mandag, tirsdag, onsdag, torsdag, fredag, lørdag, søndag
 
     DataDb.loppemarkeder.map((i, index) => {
         if(index === props.index){
@@ -19,6 +19,7 @@ export default (props) => {
             fredag = i.åbningstider[4]
             lørdag = i.åbningstider[5]
             søndag = i.åbningstider[6]
+            hjemmeside = i.hjemmeside
         }
     })
 
@@ -55,7 +56,8 @@ export default (props) => {
                 e.target.fredag.value,
                 e.target.lørdag.value,
                 e.target.søndag.value
-            ]
+            ],
+            hjemmeside: e.target.hjemmeside.value
         }
 
         DataDb.loppemarkeder.splice(props.index, 1)
@@ -122,6 +124,10 @@ export default (props) => {
                                 <p>Fredag: <input defaultValue={fredag} name="fredag" type="txt" className="form-control" id="fredag" aria-describedby="fredag"/></p>
                                 <p>Lørdag: <input defaultValue={lørdag} name="lørdag" type="txt" className="form-control" id="lørdag" aria-describedby="lørdag"/></p>
                                 <p>Søndag: <input defaultValue={søndag} name="søndag" type="txt" className="form-control" id="søndag" aria-describedby="søndag"/></p>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="hjemmeside" className="form-label"></label>
+                                <input defaultValue={hjemmeside} name="hjemmeside" type="txt" className="form-control" id="hjemmeside" aria-describedby="hjemmeside"/>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="om" className="form-label">Om:</label>
