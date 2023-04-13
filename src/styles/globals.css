@@ -14,16 +14,17 @@ hr{
 }
 
 nav{
-    background: rgba(200, 200, 200, 0.7)
+    background: rgba(0, 0, 0, 0.7);
 }
 
-.forside-om{
-    background: url("/background.png");
-    background-repeat: no-repeat;
-    background-position-x: center;
+nav h1, .nav-link{
+    color: #fff !important;
 }
 
 .forside{
+    background: url("/background.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
     min-height: 100vh;
 }
 
@@ -40,13 +41,8 @@ nav{
     padding-bottom: 5%;
 }
 
-.butik-vejled{
-    background: url("/background-2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .butikker{
+    background: #ccc;
     padding-top: 5%;
     padding-bottom: 5%;
     min-height: 100vh;
@@ -70,6 +66,7 @@ nav{
 }
 
 .system{
+    background: #ccc;
     min-height: 100vh;
     padding-top: 5%;
     padding-bottom: 5%;

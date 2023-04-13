@@ -17,19 +17,15 @@ export default () => {
 
   return (
     <>
-    <Head>
-      <title>Mitloppesalg</title>
-      <link rel="icon" type="image/x-icon" href="/favicon-32x32.png"></link>
-    </Head>
+      <Head>
+        <title>Mitloppesalg</title>
+        <link rel="icon" type="image/x-icon" href="/"></link>
+      </Head>
       <Nav om={omActive} butik={butikActive} vejled={vejledActive} system={systemActive} kontakt={kontaktActive} />
-      <div className="forside-om">
-        <Forside />
-        <Om set={setOmActive} />
-      </div>
-      <div className="butik-vejled">
-        <Butikker set={setButikActive} />
-        <Vejledning set={setVejledActive} />
-      </div>
+      <Forside />
+      <Om set={setOmActive} />
+      <Butikker set={setButikActive} />
+      <Vejledning set={setVejledActive} />
       <System set={setSystemActive} />
       <Kontakt set={setKontaktActive} />
     </>

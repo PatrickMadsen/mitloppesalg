@@ -2,7 +2,7 @@ import { useState } from "react"
 import { signIn } from "next-auth/react"
 import Router from "next/router"
 
-export default (props) => {
+export default () => {
     const [userInfo, setUserInfo] = useState({username: "", password: ""})
     const handle = async (e) => {
         e.preventDefault()
