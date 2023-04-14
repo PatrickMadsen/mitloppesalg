@@ -4,7 +4,7 @@ export default (props) => {
     const [active, setActive] = useState("")
 
     return(
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+        <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#"><h1 className="fs-5">Mitloppesalg</h1></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

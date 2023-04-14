@@ -117,6 +117,7 @@ export default (props) => {
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
+                <h4 className="text-center mt-5">Powered by Saldi.dk</h4>
             </div>
         </div>
         </>

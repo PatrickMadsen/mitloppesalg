@@ -18,7 +18,15 @@ nav{
 }
 
 nav h1, .nav-link{
-    color: #fff !important;
+    color: #fff;
+}
+
+.nav-item a:hover{
+    color: #ddd !important;
+}
+
+.active{
+    color: #888 !important;
 }
 
 .forside{
@@ -76,10 +84,10 @@ nav h1, .nav-link{
     background: url("/background-kontakt.png");
     min-height: 100vh;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
 }
 
-.kontakt h3, .kontakt p{
+.kontakt h3, h4, .kontakt p{
     color: #fff;
 }
 
