@@ -16,7 +16,7 @@ export default (props) => {
                             <a className={`nav-link ${(props.om == true) ? "active" : ""}`} href="#om">Hvem er vi? <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item">
-                            <a className={`nav-link ${(props.butik == true) ? "active" : ""}`} href="#partnere">Partnere</a>
+                            <a className={`nav-link ${(props.butik == true) ? "active" : ""}`} href="#partnere">Butikker</a>
                         </li>
                         <li className="nav-item">
                             <a className={`nav-link ${(props.vejled == true) ? "active" : ""}`} href="#vejledning">Vejledning</a>

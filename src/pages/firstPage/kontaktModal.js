@@ -1,10 +1,17 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 
-export default () => {
+export default (props) => {
     const [msg, updateMsg] = useState("")
+    const [msgColor, setMsgColor] = useState("")
+
+    useEffect(() => {
+        updateMsg(props.msg)
+        setMsgColor(props.msgColor)
+    }, [props])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        document.querySelector(".support-form").classList.remove("was-validated")
 
         const data = {
           navn: event.target.navn.value,
@@ -27,10 +34,11 @@ export default () => {
         const response = await fetch(endpoint, options)
         if(response.status == 400){
             console.log(response.data)
+            setMsgColor("text-danger")
             return updateMsg("Udfyld alle felter")
         }
         const result = await response.json()
-        
+        setMsgColor("text-success")
         updateMsg("Tak fordi du kontaktet os vi vil vende tilbage snarest")
 
         event.target.navn.value = ""
@@ -50,7 +58,7 @@ export default () => {
                     </div>
                     <div className="modal-body">
                         <div className="row">
-                            <div className="col-12 col-lg-6">
+                            <div className="col-12 col-md-6">
                                 <h3>Er du standlejer i en butik?</h3>
                                 <p>Hvis du er standlejer i en butik bedes du henvende dig direkte til butikken.
                                 Har du problemer med at bruge MitLoppesalg.dk udfyldes formularen.
@@ -65,21 +73,23 @@ export default () => {
                                 vil vi kontakte jer hurtigst
                                 muligt.</p>
                             </div>
-                            <form className="col-12 col-lg-6" onSubmit={handleSubmit}>
+                            
+                            <form className="col-12 col-md-6 needs-validation support-form" onSubmit={handleSubmit} noValidate>
+                                <p className={`mt-3 fs-5 ${msgColor}`}>{msg}</p>
                                 <div className="mb-3">
                                     <label htmlFor="navn" className="form-label">Navn:</label>
-                                    <input name="navn" placeholder="Navn" id="navn" type="text" className="form-control" aria-describedby="navn"/>
+                                    <input name="navn" placeholder="Navn" id="navn" type="text" className="form-control" aria-describedby="navn" required/>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="tlf" className="form-label">Telefon:</label>
-                                    <input name="tlf" type="tel" className="form-control" id="tlf" aria-describedby="tlf" />
+                                    <input name="tlf" type="tel" className="form-control" id="tlf" aria-describedby="tlf" required/>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="email" className="form-label">E-mail:</label>
-                                    <input name="email" placeholder="example@website.com" type="email" className="form-control" id="email" aria-describedby="email"/>
+                                    <input name="email" placeholder="example@website.com" type="email" className="form-control" id="email" aria-describedby="email" required/>
                                 </div>
                                 <div className="mb-3 form-check">
-                                    <input className="form-check-input" type="radio" name="type" id="radio1" value="Jeg er standlejer i en butik og har brug for hjælp" />
+                                    <input className="form-check-input" type="radio" name="type" id="radio1" value="Jeg er standlejer i en butik og har brug for hjælp" required/>
                                     <label className="form-check-label" htmlFor="radio1">Jeg er standlejer i en butik og har brug for hjælp</label>
                                 </div>
                                 <div className="mb-3 form-check">
@@ -95,11 +105,10 @@ export default () => {
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="besked" className="form-label">Besked:</label>
-                                    <textarea className="form-control" id="txt" name="txt" rows="3"></textarea>
+                                    <textarea className="form-control" id="txt" name="txt" rows="3" required></textarea>
                                 </div>
                                 <button type="submit" className="btn btn-primary">Submit</button>
                             </form>
-                            <p>{msg}</p>
                         </div>
                     </div>
                     <div className="modal-footer">

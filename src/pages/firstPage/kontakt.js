@@ -3,9 +3,31 @@ import { useState, useEffect, useRef } from "react"
 
 export default (props) => {
     const [msg, updateMsg] = useState("")
+    const [msgColor, setMsgColor] = useState("")
+
+    if(typeof window !== "undefined"){
+        'use strict'
+        
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    setMsgColor("text-danger")
+                    updateMsg("Udfyld alle felter")
+                }
+                form.classList.add('was-validated')
+            }, false)
+            })
+    }
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        document.querySelector(".kontakt-form").classList.remove("was-validated")
 
         const data = {
           navn: event.target.navn.value,
@@ -13,7 +35,7 @@ export default (props) => {
           email: event.target.email.value,
           txt: event.target.txt.value
         }
-    
+
         const JSONdata = JSON.stringify(data)
         const endpoint = '/api/form'
         const options = {
@@ -26,10 +48,11 @@ export default (props) => {
     
         const response = await fetch(endpoint, options)
         if(response.status == 400){
+            setMsgBorder("border border-danger")
             return updateMsg("Udfyld alle felter")
         }
         const result = await response.json()
-        
+        setMsgColor("text-success")
         updateMsg("Tak fordi du kontaktet os vi vil vende tilbage snarest muligt")
 
         event.target.navn.value = ""
@@ -51,7 +74,7 @@ export default (props) => {
 
     return(
         <>
-         <Modal />
+         <Modal msg={msg} msgColor={msgColor} />
         <div className="kontakt"  id="kontakt">
             <div className="container width" id="kontakt" ref={domRef}>
                
@@ -74,26 +97,26 @@ export default (props) => {
                         <p>Vis du har brug for support <a className="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#support" type="button" href="#">KLIK HER</a></p>
                     </div>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <p className={`mt-3 fs-5 ${msgColor}`}>{msg}</p>
+                <form onSubmit={handleSubmit} className="needs-validation kontakt-form" noValidate>
                     <div className="mb-3">
                         <label htmlFor="navn" className="form-label">Navn:</label>
-                        <input name="navn" placeholder="Navn" id="navn" type="text" className="form-control" aria-describedby="navn"/>
+                        <input name="navn" placeholder="Navn" id="navn" type="text" className="form-control" aria-describedby="navn" required/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="tlf" className="form-label">Telefon:</label>
-                        <input name="tlf" type="tel" className="form-control" id="tlf" aria-describedby="tlf" />
+                        <input name="tlf" type="tel" className="form-control" id="tlf" aria-describedby="tlf" required/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label">E-mail:</label>
-                        <input name="email" placeholder="example@website.com" type="email" className="form-control" id="email" aria-describedby="email"/>
+                        <input name="email" placeholder="example@website.com" type="email" className="form-control" id="email" aria-describedby="email" required/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="besked" className="form-label">Besked:</label>
-                        <textarea className="form-control" id="txt" name="txt" rows="3"></textarea>
+                        <textarea className="form-control" id="txt" name="txt" rows="3" required></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
-                <p className="mt-3">{msg}</p>
             </div>
         </div>
         </>

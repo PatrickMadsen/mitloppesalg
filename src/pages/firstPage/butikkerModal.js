@@ -34,7 +34,7 @@ export default (props) => {
                     </div>
                     <div className="modal-body">
                         <p><b>Her kan du logge ind og følge med i dit salg -samt udskrive labels</b></p>
-                        <a className="btn btn-secondary">Logind</a>
+                        <a className="btn btn-secondary" target="_blank" href="https://ssl4.saldi.dk/pos/mysale/mysale.php">Logind</a>
                         <div className="row mt-3">
                             <div className="col-12 col-lg-6">
                                 <h3 className="fs-3">Om {navn}</h3>
@@ -84,10 +84,6 @@ export default (props) => {
                                 <table className="table">
                                     <tbody>
                                         <tr>
-                                            <th  scope="row">Navn</th>
-                                            <td>{navn}</td>
-                                        </tr>
-                                        <tr>
                                             <th scope="row">Adresse</th>
                                             <td>{adresse}</td>
                                         </tr>
@@ -113,7 +109,7 @@ export default (props) => {
                             {Data.loppemarkeder.map((i, index) => {
                                 if(index === props.id){
                                     return i.social.map((i, index) => {
-                                        return <a href={i.link} key={index}><i className={i.img} style={{color: "#3b5998"}}></i></a>
+                                        return <a href={i.link} target="_blank" key={index}><i className={i.img} style={{color: "#3b5998"}}></i></a>
                                     })
                                 }
                             })}
