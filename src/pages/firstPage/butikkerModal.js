@@ -41,7 +41,7 @@ export default (props) => {
                                 {om}
                             </div>
                             <div className="col-12 col-lg-6">
-                                <h3 className="fs-3">Åbningstider</h3>
+                                <h3 className="fs-3 opening">Åbningstider</h3>
                                 <table className="table table-striped">
                                     <tbody>
                                         <tr>
@@ -80,7 +80,7 @@ export default (props) => {
                                 </table>
                             </div>
                             <div>
-                                <h3 className="fs-3">Kontakinformation</h3>
+                                <h3 className="fs-3 opening">Kontakinformation</h3>
                                 <table className="table">
                                     <tbody>
                                         <tr>

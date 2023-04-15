@@ -3,6 +3,7 @@ body{
 
 p{
     color: #343434;
+    word-wrap: break-word;
 }
 
 h1, h2, h3, h4 ,h5 ,h6{
@@ -182,5 +183,24 @@ nav h1, .nav-link{
     }
     .width{
         width: 80vw;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .forside{
+        background: url("/background.jpg");
+        background-position-x: center;
+    }
+
+    .string{
+        display: none;
+    }
+
+    .opening{
+        margin-top: 30px;
+    }
+
+    .mobile-button{
+        margin-bottom: 20px;
     }
 }

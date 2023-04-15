@@ -18,10 +18,10 @@ export default (props) => {
             <div className="container width" ref={domRef}>
                 <FadeLeft>
                     <div className="row">
-                        <div className="col-5">
+                        <div className="col-sm-5 col-12">
                             <img src="/aboutus.jpg" className="img-fluid"/>
                         </div>
-                        <div className="col-7 align-items-center">
+                        <div className="col-sm-7 col-12 align-items-center">
                             <h3 className="fs-1 pb-5">Hvem er vi?</h3>
                             <p>MitLoppeSalg.dk er en portal der bruges i loppemarkeds-butikker  med kommissionssalg/udlejning af stande. Udviklet af Saldi.dk. I systemet kan butikken oprette og registrere nye standlejere. I oversigten har butikken det fulde overblik over hvilke stande er lejet ud og hvor længe.</p>
                         </div>
@@ -30,7 +30,7 @@ export default (props) => {
                 <div className="ma-top-5">
                     <FadeRight>
                         <div className="row">
-                            <div className="col-7 align-items-center">
+                            <div className="col-sm-7 col-12 align-items-center">
                                 <h3 className="fs-1 pb-5">Følg med hjemmefra</h3>
                                 <p>
                                     I MitLoppeSalg kan den enkelte stand-lejer selv, via et login,
@@ -46,7 +46,7 @@ export default (props) => {
                                     logo, billeder samt informationer om butikken.
                                 </p>
                             </div>
-                            <div className="col-5">
+                            <div className="col-sm-5 col-12">
                                 <img src="/fromhome.jpg" className="img-fluid float-end"/>
                             </div>
                         </div>

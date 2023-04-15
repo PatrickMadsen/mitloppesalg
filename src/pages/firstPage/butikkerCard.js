@@ -9,7 +9,7 @@ export default (props) => {
           }
           return(
             <div className="col-6 col-lg-3 text-center mb-5" key={index}>
-              <a className="bounce-ball" key={index} onClick={() => props.id(index)} data-bs-toggle="modal" data-bs-target="#info" type="button" href="#"><img className="rounded-circle" src={i.link} title={i.navn} alt="Genbrugs marked" /></a>
+              <a className="bounce-ball" key={index} onClick={() => props.id(index)} data-bs-toggle="modal" data-bs-target="#info" type="button" href="#"><img className="rounded-circle img-fluid" src={i.link} title={i.navn} alt="Genbrugs marked" /></a>
               <p>{i.navn}</p>
             </div>
           )
@@ -19,7 +19,7 @@ export default (props) => {
             if(index >= 8){
               return(
                 <div className="col-6 col-lg-3 text-center mb-5" key={index}>
-                  <a className="bounce-ball" key={index} onClick={() => props.id(index)} data-bs-toggle="modal" data-bs-target="#info" type="button" href="#"><img className="rounded-circle" src={i.link} title={i.navn} alt="Genbrugs marked" /></a>
+                  <a className="bounce-ball" key={index} onClick={() => props.id(index)} data-bs-toggle="modal" data-bs-target="#info" type="button" href="#"><img className="rounded-circle img-fluid" src={i.link} title={i.navn} alt="Genbrugs marked" /></a>
                   <p>{i.navn}</p>
                 </div>
               )

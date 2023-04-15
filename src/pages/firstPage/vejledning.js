@@ -27,15 +27,15 @@ export default (props) => {
                     </div>
                 </div>
                 <div className="row d-flex justify-content-center">
-                    <div className="col-3 mt-4">
+                    <div className="col-sm-3 col-4 mt-4">
                         <p>Sådan opretter du MitLoppeSalg og inviterer kommissionskunder</p>
                         <a target="_blank" href="https://mitloppesalg.dk/wp-content/uploads/2021/04/Oprettelse-af-Mit-salg.pdf">Oprettelse at Mit salg</a>
                     </div>
-                    <div className="col-3 mt-4">
+                    <div className="col-sm-3 col-4 mt-4">
                         <p>Du er kunde hos en loppebutik/ butik og ønsker at lave dine egne labels?</p>
                         <a target="_blank" href="https://mitloppesalg.dk/wp-content/uploads/2021/04/Oprettelse-af-Mit-salg.pdf">Lav egne labels, som kunde i loppebutik</a>
                     </div>
-                    <div className="col-3 mt-4">
+                    <div className="col-sm-3 col-4 mt-4">
                         <p>Her kan du som butik gå ind og ændre den måde dine Labels ser ud</p>
                         <a target="_blank" href="https://mitloppesalg.dk/wp-content/uploads/2021/04/Oprettelse-af-Mit-salg.pdf">Ændre dine Labelformer</a>
                     </div>

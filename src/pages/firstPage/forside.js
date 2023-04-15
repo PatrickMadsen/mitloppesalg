@@ -4,7 +4,7 @@ export default () => {
             <div className="container width">
                 <div className="text-center pa-top-10">
                     <p>Har du eller tænker du at starte et loppesupermarked?</p>
-                    <a href="#kontakt" className="btn btn-primary mt-5">Kontakt os</a>
+                    <a href="#kontakt" className="btn btn-primary mt-5 mobile-button">Kontakt os</a>
                 </div>
             {/* <div className="d-flex justify-content-center">
                 <a href="#section1">
