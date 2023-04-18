@@ -23,7 +23,14 @@ export default (props) => {
                         </div>
                         <div className="col-sm-7 col-12 align-items-center">
                             <h3 className="fs-1 pb-5">Hvem er vi?</h3>
-                            <p>MitLoppeSalg.dk er en portal der bruges i loppemarkeds-butikker  med kommissionssalg/udlejning af stande. Udviklet af Saldi.dk. I systemet kan butikken oprette og registrere nye standlejere. I oversigten har butikken det fulde overblik over hvilke stande er lejet ud og hvor længe.</p>
+                            <p>MitLoppeSalg er en del af Saldi.dk, en dansk virksomhed der har udviklet
+                                butiksløsninger i samarbejde med vores kunder siden 2008.
+                            </p>
+                            <p>Her på Mitloppesalg.dk skabes der overblik over loppemarkeds-butikker med
+                                kommissionssalg/udlejning af stande. I systemet kan butikken oprette og registrere
+                                nye standlejere. I oversigten har butikken det fulde overblik over hvilke stande er
+                                lejet ud og hvor længe. 
+                            </p>
                         </div>
                     </div>
                 </FadeLeft>

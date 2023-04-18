@@ -23,7 +23,10 @@ export default (props) => {
                     <div className="col-sm-7 col-12 mt-5">
                         <h3>Kassesystem til kommissions-loppemarked</h3>
                         <p className="text-muted fst-italic">–Systemet kan også bruges til alm. butik, restauranter, café, bar og loppemarked samt loppebutik.</p>
-                        <p>Driver I en loppebutik, hvor du sælger varer i kommission, eller skal du til at åbne en butik? Hos MItLoppeSalg kan vi levere et komplet regnskabs- og kassesystem til dit Loppemarked!</p>
+                        <p>Med knap 20 års erfaring i branchen kan din butik komme trykt i gang med
+                            Loppesalget, problemfrit og nemt. Vi har ca. 2 ugers leveringstid fra aftalen er på
+                            plads, fri support & hjælp til tilpasninger og rettelser i systemet.
+                        </p>
                     </div>
                     <div className="col-sm-4 col-12 pa-top-10">
                         <img src="/kasse.jpg" className="img-fluid" />

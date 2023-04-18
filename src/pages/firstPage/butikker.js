@@ -26,7 +26,7 @@ export default (props) => {
                 <Modal id={id}/>
                 <div className="col-12 text-center">
                     <h3 className="fs-1">Butikker</h3>
-                    <p>Nogen af de butikker der bruger vores system.</p>
+                    <p>Et par af vores glade kunder.</p>
                 </div>
                 <div className="row d-flex justify-content-center mt-5">
                     <Card id={setId}/>
