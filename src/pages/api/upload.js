@@ -15,7 +15,7 @@ export default async (req, res) => {
             if (err) return reject(err)
             let oldPath = files.file.filepath
             let newPath = `./public/${files.file.originalFilename}`
-            mv(oldPath, newPath, function(err) {
+            mv(oldPath, newPath, (err) => {
             })
             res.status(200).json({ fields, files })
         })

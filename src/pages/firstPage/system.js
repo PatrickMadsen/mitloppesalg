@@ -17,7 +17,7 @@ export default (props) => {
                 <div className="row">
                     <h2 className="text-center fs-1 pb-5">Vores system</h2>
                     <div className="col-sm-4 col-12 mt-5">
-                        <img src="/computer-ipad.png" className="img-fluid" />
+                        <img src="/recycling.jpg" className="img-fluid" />
                     </div>
                     <div className="col-sm-1 string"><div className="vr vr-blurry hr-size"></div></div>
                     <div className="col-sm-7 col-12 mt-5">

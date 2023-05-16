@@ -54,11 +54,12 @@ export default (props) => {
                                 </p>
                             </div>
                             <div className="col-sm-5 col-12">
-                                <img src="/fromhome.jpg" className="img-fluid float-end"/>
+                                <img src="/dame.jpg" className="img-fluid float-end"/>
                             </div>
                         </div>
                     </FadeRight>
                 </div>
+                <a href="#kontakt" className="btn btn-primary mt-5 mobile-button">Kontakt os</a>
             </div>
         </div>
     )
